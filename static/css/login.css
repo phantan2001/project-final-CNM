@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to right top, #051937, #00476e, #007b9f, #00b2c4, #12ebd8);
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 70vw;
+    margin: 0 auto;
+}
+.heading {
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+form {
+    width: 45%;
+    height: 100%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #AAC4FF;
+    border: 1px solid rgb(136, 136, 136);
+    box-shadow: rgba(92, 92, 93, 0.2) 0px 8px 24px;
+    border-radius: 10px;
+
+}
+.form-login {
+    max-width: 100%;
+    padding: 20px;
+}
+.form-login li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 90%;
+    margin: 0 auto;
+}
+.form-login input {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid rgb(153, 153, 153);
+    outline: none;
+    margin-bottom: 20px;
+}
+.form-login label {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.submit {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.submit input {
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: 1px solid rgb(136, 136, 136);
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+}
+.submit input:hover {
+    background-color: #5d8eff;
+    color: #fff;
+    border: 1px solid #5d8eff;
+    transition: all 0.3s ease-in-out;
+}
+.submit a {
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+    background-color: transparent;
+    border: 1px solid rgb(163, 163, 163);
+    border-top: none;
+    border-left: none;
+}
+.submit a:hover {
+    color: #fff;
+    background-color: #5d8eff;
+    border: 1px solid rgb(163, 163, 163);
+    border-top: none;
+    border-left: none;
+    transition: all 0.3s ease-in-out;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Thông tin</title>
+	<link rel="stylesheet" href={{ url_for('static', filename='css/topStyle.css' ) }} />
+	<link rel="stylesheet" href={{ url_for('static', filename='css/editProfile.css' ) }} />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
+<body>
+	<div id="title">
+		<img src="../static/images/heart.png" alt="" class="logo">
+		<form>
+			<input id="searchBox" type="text" name="searchQuery">
+			<input id="searchButton" type="submit" value="Search">
+		</form>
+
+		{% if not loggedIn %}
+		<div id="signInButton">
+			<a class="link" href="/loginForm">Đăng nhập</a>
+		</div>
+		{% else %}
+		<div class="dropdown">
+			<button class="dropbtn">Xin chào {{userName}}</button>
+			<div class="dropdown-content">
+				<a href="/">Trang chủ</a>
+				<a href="/account/orders">Đơn hàng</a>
+				<a href="/account/profile">Thông tin của bạn</a>
+				<hr>
+				<a href="/logout">Đăng xuất <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+			</div>
+		</div>
+		{% endif %}
+		<div id="kart">
+		</div>
+	</div>
+
+	<div class="display">
+		<a href="/account/profile/view">Xem thông tin</a><br>
+		<a href="/account/profile/edit">Chỉnh sửa thông tin</a><br>
+		<a href="/account/profile/changePassword">Đổi mật khẩu</a>
+	</div>
+</body>
+
+</html>
