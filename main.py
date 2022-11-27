@@ -3,7 +3,6 @@ import sqlite3
 import hashlib
 import os
 from werkzeug.utils import secure_filename
-from instamojo_wrapper import Instamojo
 import requests
 
 app = Flask(__name__)
@@ -170,13 +169,13 @@ def changePassword():
                     cur.execute(
                         "UPDATE users SET password = ? WHERE userId = ?", (newPassword, userId))
                     conn.commit()
-                    msg = "Changed successfully"
+                    msg = "Đổi mật khẩu thành công"
                 except:
                     conn.rollback()
-                    msg = "Failed"
+                    msg = "Thất bại"
                 return render_template("changePassword.html", msg=msg)
             else:
-                msg = "Wrong password"
+                msg = "Sai mật khẩu!!!"
         conn.close()
         return render_template("changePassword.html", msg=msg)
     else:
@@ -297,9 +296,6 @@ def checkout():
     return render_template("checkout.html", products=products, totalPrice=totalPrice, loggedIn=loggedIn, userName=userName, noOfItems=noOfItems)
 
 
-@app.route("/instamojo")
-def instamojo():
-    return render_template("instamojo.html")
 
 
 @app.route("/removeFromCart")

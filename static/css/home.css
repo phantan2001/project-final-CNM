@@ -32,3 +32,88 @@ table {
 .displayCategory ul li {
 	font-size: 20px;
 }
+.user {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	max-width: 200px;
+}
+.nguoi-mua {
+	padding: 10px 12px;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	color: #024eff;
+	background-color: #fff;
+	cursor: pointer;
+}
+.nguoi-ban {
+	padding: 10px 12px;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	color: #024eff;
+	background-color: #fff;
+	cursor: pointer;
+}
+.nguoi-ban a, .nguoi-mua a {
+	color: #024eff;
+}
+.nguoi-mua:hover {
+	background-color: rgb(211, 204, 204);
+	color: #487efc;
+	transition: all 0.3s ease-in-out;
+	border: 1px solid #fff;
+}
+.nguoi-ban:hover {
+	background-color: rgb(211, 204, 204);
+	color: #487efc;
+	transition: all 0.3s ease-in-out;
+	border: 1px solid #fff;
+}
+.detail-product {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	max-width: 50vw;
+	margin: 0 auto;
+}
+.caption {
+	margin-top: 30px;
+	margin-bottom: 15px;
+	font-size: 16px;
+	font-weight: 500;
+
+}
+.title {
+	display: flex;
+	gap: 30px;
+	align-items: center;
+	margin-bottom: 30px;
+	width: 100%;
+	text-align: center;
+}
+.title .user {
+	font-size: 18px;
+	font-weight: 700;
+	margin-left: 50px;
+}
+.price {
+	font-size: 18px;
+	font-weight: bold;
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+.contact {
+	font-size: 18px;
+	font-weight: 500;
+	margin-bottom: 20px;
+	font-style: italic;
+}
+img {
+	max-width: 600px;
+	max-height: 600px;
+	object-fit: cover;
+}

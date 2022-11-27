@@ -30,50 +30,22 @@
 				<a href="/logout">Đăng xuất <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
 			</div>
 		</div>
+		<div class="user">
+			<div class="nguoi-mua" id="purchase">
+				<a href="#">Người mua</a>
+			</div>
+			<div class="nguoi-ban" id="sell">
+				<a href="#">Người bán</a>
+			</div>
+		</div>
 		{% endif %}
 		<div id="kart">
 		</div>
 	</div>
-	<div class="display">
-		<div class="displayCategory">
-			<h2>Shop by Category: </h2>
-			<ul>
-				{% for row in categoryData %}
-				<li><a href="/displayCategory?categoryId={{row[0]}}">{{row[1]}}</a></li>
-				{% endfor %}
-			</ul>
-		</div>
-		<div>
-			<h2>Items</h2>
-			{% for data in itemData %}
-			<table>
-				<tr id="productName">
-					{% for row in data %}
-					<td>
-						{{row[1]}}
-					</td>
-					{% endfor %}
-				</tr>
-				<tr id="productImage">
-					{% for row in data %}
-					<td>
-						<a href="/productDescription?productId={{row[0]}}">
-							<img src={{ url_for('static', filename='uploads/' + row[4]) }} id="itemImage" />
-						</a>
-					</td>
-					{% endfor %}
-				</tr>
-				<tr id="productPrice">
-					{% for row in data %}
-					<td>
-						Rs {{row[2]}}
-					</td>
-					{% endfor %}
-				</tr>
-			</table>
-			{% endfor %}
-		</div>
+	<div class="display" id="products">
+		
 	</div>
+	<script src="../static/js/home.js"></script>
 </body>
 
 </html>

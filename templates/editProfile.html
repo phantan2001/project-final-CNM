@@ -37,16 +37,30 @@
 		</div>
 	</div>
 
-	<div class="display">
+	<div class="display form-edit">
 		<h2>Chỉnh sửa thông tin</h2>
 		<form action="/updateProfile" method="POST">
-			<p>Email:<input type="email" name="email" value={{profileData[1]}} readonly="readonly"></p>
-			<p>User Name:<input type="text" name="userName" value={{profileData[2]}}></p>
-			<p>Address: <input type="text" name="address1" value={{profileData[3]}}></p>
-			<p>Phone Number: <input type="text" name="phone" value={{profileData[4]}}></p>
-			<input type="submit" value="Save">
+			<ul class="list-input">
+				<li class="item">
+					<label>Email:</label>
+					<input type="email" name="email" value={{profileData[1]}} readonly="readonly">
+				</li>
+				<li class="item">
+					<label>Họ tên:</label>
+					<input type="text" name="userName" value={{profileData[2]}}>
+				</li>
+				<li class="item">
+					<label>Địa chỉ:</label>
+					<input type="text" name="address" value={{profileData[3]}}>
+				</li>
+				<li class="item">
+					<label>Số điện thoại:</label>
+					<input type="text" name="phone" value={{profileData[4]}}>
+				</li>
+			</ul>
+			<input type="submit" value="Lưu" id="submit">
 		</form>
-		<a href="{{ url_for('profileHome') }}">Go to Profile</a>
+		<a href="{{ url_for('profileHome') }}" class="btn-back">Trở lại</a>
 	</div>
 </body>
 
